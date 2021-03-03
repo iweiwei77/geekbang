@@ -5,6 +5,7 @@
          http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          metadata-complete="true" version="2.5">
 
+
     <servlet>
         <servlet-name>default</servlet-name>
         <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
@@ -29,7 +30,7 @@
         <servlet-name>default</servlet-name>
         <url-pattern>*.js</url-pattern>
     </servlet-mapping>
-
+    
     <servlet>
         <servlet-name>FrontControllerServlet</servlet-name>
         <servlet-class>org.geektimes.web.mvc.FrontControllerServlet</servlet-class>
@@ -45,7 +46,7 @@
         <filter-name>CharsetEncodingFilter</filter-name>
         <filter-class>org.geektimes.projects.user.web.filter.CharsetEncodingFilter</filter-class>
         <init-param>
-            <!-- Filter ÅäÖÃ = FilterConfig -->
+            <!-- Filter config = FilterConfig -->
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
         </init-param>
@@ -79,12 +80,13 @@
         </jsp-property-group>
     </jsp-config>
 
+
     <welcome-file-list>
         <welcome-file>/</welcome-file>
         <welcome-file>/index</welcome-file>
         <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
-
+    
 <!--    <resource-ref>-->
 <!--        <description>DB Connection</description>-->
 <!--        <res-ref-name>jdbc/UserPlatformDB</res-ref-name>-->

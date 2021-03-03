@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 字符编码 Filter
+ * encoding Filter
  */
 public class CharsetEncodingFilter implements Filter {
 
@@ -29,11 +29,11 @@ public class CharsetEncodingFilter implements Filter {
             HttpServletResponse httpResponse = (HttpServletResponse) response;
             httpRequest.setCharacterEncoding(encoding);
             httpResponse.setCharacterEncoding(encoding);
-            servletContext.log("当前编码已设置为：" + encoding);
+            servletContext.log("Set current encoding :" + encoding);
             // CharsetEncodingFilter -> FrontControllerServlet -> forward -> index.jsp
         }
 
-        // 执行过滤链
+        // do filter chain
         chain.doFilter(request,response);
     }
 
